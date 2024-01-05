@@ -39,6 +39,10 @@ img,video,picture{
   width: 100%;
   vertical-align: top;
 }
+svg{
+  width: 100%;
+  height: auto;
+}
 .clearfix::after,.clearfix::before{
   content: '';
   display: block;
