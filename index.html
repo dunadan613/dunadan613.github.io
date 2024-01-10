@@ -95,7 +95,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: var(--color-main);
+      background-color: var(--text-color);
     }
     .header .container{
       padding-top: 40px;
@@ -107,7 +107,7 @@
       width: 200px;
       height: 200px;
       margin: 25px 0;
-      border: 1px solid var(--text-color);
+      border: 1px solid white;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -115,17 +115,23 @@
       overflow: hidden;
     }
     .header-nav-list li{
-      margin: 30px 0;
+      margin: 50px 0;
     }
     .header-nav-list li:hover span{
       text-decoration: underline;
     }
-    .header-nav a{
+    .header-nav-list a{
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      color: white;
+      fill: white;
     }
-    .header-nav .imgbox{
+    .header-nav-list li.active a{
+      color: var(--color-main);
+      fill: var(--color-main);
+    }
+    .header-nav-list .imgbox{
       display: inline-block;
       margin-right: 5px;
       width: 50px;
@@ -295,8 +301,8 @@
     .slide-txt button{
       color: white;
       background-color: #353839;
-      width: 104px;
-      height: 59px;
+      width: 90px;
+      height: 45px;
     }
     .slide-txt button a{
       display: flex;
@@ -304,7 +310,6 @@
       align-items: center;
       width: 100%;
       height: 100%;
-      padding: 8px 18px;
     }
     /* 섹션 4번(작업물) 끝 */
 
@@ -375,32 +380,35 @@
     @media(max-width:768px){
       /* 모바일 */
       .header{
-        bottom: auto;
-        width: 100%;
+        background-color: transparent;
         z-index: 100;
+        width: auto;
+        right: auto;
+        bottom: auto;
+        border-right: 1px solid #1b1b1b;
+        border-bottom: 1px solid #1b1b1b;
       }
       .header .container{
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 10px 20px;
+        padding: 0 10px;
       }
       .header h1{
-        width: 50px;
-        height: 50px;
-        margin: 0;
-      }
-      .header .header-nav-list{
-        display: flex;
-        justify-content: flex-end;
-      }
-      .header-nav .imgbox{
         display: none;
       }
-      .header-nav li{
-        margin-left: 15px;
+      .header-nav-list a{
+        justify-content: center;
+        fill: #1b1b1b;
+      }
+      .header-nav-list .imgbox{
+        margin-right: 0;
+      }
+      .header-nav-list{
+        margin: 20px 0;
+      }
+      .header-nav-list span{
+        display: none;
       }
       .main{
-        margin-left: 0;
+        margin-left: 65px;
       }
       .about .container{
         flex-flow: column nowrap;
@@ -454,6 +462,9 @@
       .header-nav span{
         display: none;
       }
+      .main{
+        margin-left: 55px;
+      }
       .about .art-about{
         width: 100%;
       }
@@ -473,6 +484,13 @@
       .art-skill p br{
         display: none;
       }
+      .slide-txt button{
+        width: 70px;
+        height: 35px;
+      }
+      .slide-txt button a{
+        font-size: 11px;
+      }
     }
   </style>
 </head>
@@ -483,27 +501,95 @@
         <h1 class="title2">신준혁의 포트폴리오</h1>
         <nav class="header-nav">
           <ul class="header-nav-list">
-            <li>
+            <li class="active">
               <a href="#intro">
-                <div class="imgbox"><img src="./assets/images/icon-home.svg" alt=""></div>
+                <div class="imgbox">
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                  <g>
+                    <path stroke="#FFFFFF" stroke-miterlimit="10" d="M50.011,20.542L16.297,50.781v43.207
+                      c0,1.117,0.89,2.013,1.992,2.013h21.069V77.055c0-1.115,0.883-2.019,1.986-2.019h17.313c1.1,0,1.983,0.901,1.983,2.019V96h21.072
+                      c1.104,0,1.985-0.895,1.985-2.014V50.768L50.011,20.542z"/>
+                    <polygon stroke="#FFFFFF" stroke-miterlimit="10" points="83.702,50.768 83.703,50.768 83.702,50.766 	"/>
+                    <polygon stroke="#FFFFFF" stroke-miterlimit="10" points="50.197,4 50.011,4 49.815,4 49.814,4 2,46.885 
+                      7.038,52.643 50.01,14.095 92.975,52.643 98,46.885 	"/>
+                    <polygon stroke="#FFFFFF" stroke-miterlimit="10" points="28.417,10.174 16.297,10.174 16.297,28.441 
+                      28.313,17.446 	"/>
+                  </g>
+                  </svg>
+                </div>
                 <span class="title3">HOME</span>
               </a>
             </li>
             <li>
               <a href="#about">
-                <div class="imgbox"><img src="./assets/images/icon-info.svg" alt=""></div>
+                <div class="imgbox">
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                  <g>
+                    <path d="M66.203,5H7.5v90h85V27.148L66.203,5z M67.053,10.871l21.288,17.931H67.053V10.871z M11.384,91.016V8.986
+                      h51.784v23.803h25.448v58.227H11.384z"/>
+                    <rect x="20.973" y="78.303" width="37.775" height="3.986"/>
+                    <rect x="20.774" y="54.498" width="58.451" height="3.988"/>
+                    <rect x="20.774" y="64.506" width="58.451" height="3.987"/>
+                    <path d="M46.991,36.823c1.927-2.118,3.113-4.916,3.113-7.989c0-6.58-5.387-11.933-12.007-11.933
+                      c-6.622,0-12.007,5.353-12.007,11.933c0,2.907,1.054,5.573,2.798,7.645c-5.517,2.858-7.966,11.442-8.092,11.893l3.736,1.093
+                      c0.029-0.105,3.012-10.195,8.336-9.906c1.583,0.768,3.354,1.209,5.229,1.209c1.827,0,3.553-0.42,5.104-1.148
+                      c4.221,0.559,7.326,7.296,8.188,9.931l1.842-0.633l1.844-0.63C54.939,47.877,52.295,39.926,46.991,36.823z M29.973,28.834
+                      c0-4.382,3.644-7.947,8.124-7.947s8.123,3.565,8.123,7.947c0,4.384-3.643,7.948-8.123,7.948S29.973,33.218,29.973,28.834z"/>
+                  </g>
+                  </svg>
+                </div>
                 <span class="title3">ABOUT ME</span>
               </a>
             </li>
             <li>
               <a href="#skill">
-                <div class="imgbox"><img src="./assets/images/icon-skill.svg" alt=""></div>
+                <div class="imgbox">
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                  <path d="M82.055,36.326c2.313-1.029,7.961-3.841,10.954-7.819c3.81-5.007,3.538-6.723,3.538-6.723l-13.134,2.4
+                    l-3.472-2.949l0.953-2.812l12.521-2.606c0,0-5.104-4.253-10.956-5.35c-5.514-1.098-12.59,0.137-15.313,6.104v-0.068
+                    c0,0-1.361,2.881-1.564,4.802c-0.204,1.853-1.154,5.898-2.928,9.122c-1.496,2.675-3.129,5.762-7.213,9.809l-1.088-1.098
+                    l-0.479,0.411l-13.88-14.472c-3.673-12.003,14.227-8.711,21.914-7.751C43.262-0.712,23.187,7.861,13.253,28.644
+                    c-2.45,3.017-7.76,0.617-10.753,6.858c1.702,4.801,9.052,9.535,13.202,11.043c5.242-3.088,4.084-8.711,5.378-12.758
+                    c3.946-3.293,7.075-2.195,10.819,0.479l14.835,12.141l-0.407,0.412l0.68,0.755c-10.888,9.054-31.305,25.72-33.685,27.641
+                    c-2.928,2.4-8.032,6.928-2.45,12.688c5.648,5.765,10.955,2.195,12.657,0.479c1.224-1.165,20.073-19.479,32.051-31.002L86.203,92.5
+                    L97.5,81.525l-33.072-32.51c0.408-0.412,0.748-0.755,0.885-0.823c1.633-1.371,4.287-4.526,11.229-6.584l7.622,0.96L84.3,41.95
+                    L82.055,36.326z"/>
+                  </svg>
+                </div>
                 <span class="title3">SKILL</span>
               </a>
             </li>
             <li>
               <a href="#pofol">
-                <div class="imgbox"><img src="./assets/images/icon-result.svg" alt=""></div>
+                <div class="imgbox">
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                  <g>
+                    <polygon points="75.523,5.065 75.523,20.456 89.178,20.456 	"/>
+                    <path d="M71.406,24.108V4.999H9.999v90h80V24.108H71.406z M72.85,53.979L47.186,78.367l-0.068,0.068h-0.069
+                      L46.98,78.5v0.066l-0.069,0.063h-0.068l-0.069,0.066h-0.068l-0.069,0.066l-0.069,0.063H46.5l-0.069,0.064h-0.068l-0.069,0.064
+                      h-0.068l-0.069,0.063H46.02l-0.068,0.063h-0.137l-0.068,0.063h-0.274l-0.069,0.067H44.51l-0.069-0.067h-0.206l-0.068-0.063H44.03
+                      l-0.069-0.063h-0.205l-0.069-0.063h-0.068c-0.274-0.135-0.617-0.329-0.891-0.594L27.153,63.492c-1.236-1.17-1.236-3.063,0-4.23
+                      l2.468-2.354c1.237-1.176,3.227-1.176,4.461,0L44.99,67.219l20.861-19.827c1.231-1.173,3.226-1.173,4.459,0l2.539,2.349
+                      C74.016,50.913,74.016,52.805,72.85,53.979z"/>
+                  </g>
+                  </svg>
+                </div>
                 <span class="title3">PORTFOLIO</span>
               </a>
             </li>
@@ -542,19 +628,19 @@
             <ul>
               <li>
                 <p class="bold">2017/08~2018/09</p>
-                <p class="paragraph">ACT 로지스틱스 근무</p>
+                <p class="paragraph carrer-tit">ACT 로지스틱스 근무</p>
               </li>
               <li>
                 <p class="bold">2018/02</p>
-                <p class="paragraph">영종국제물류고등학교 졸업</p>
+                <p class="paragraph carrer-tit">영종국제물류고등학교 졸업</p>
               </li>
               <li>
                 <p class="bold">2018/11~2023/02</p>
-                <p class="paragraph">ACT 로지스틱스 근무</p>
+                <p class="paragraph carrer-tit">ACT 로지스틱스 근무</p>
               </li>
               <li>
                 <p class="bold">2023/08~2024/01</p>
-                <p class="paragraph">인천IT직업능력개발학원 직업훈련 수료</p>
+                <p class="paragraph carrer-tit">인천IT직업능력개발학원 직업훈련 수료</p>
               </li>
             </ul>
           </article>
@@ -607,7 +693,7 @@
             <ul>
               <li>
                 <div class="imgbox">
-                  <div class="fill"><span class="none">50</span></div>
+                  <div class="fill"><span class="none">40</span></div>
                   <img src="./assets/images/icon-photo.svg" alt="포토샵">
                 </div>
                 <p class="paragraph">
@@ -770,6 +856,41 @@
       },
     });
     // --------------- 작업물 스와이퍼 끝 ---------------
+
+    function fnGetCoods(section){
+      let box=section.getBoundingClientRect();
+      return {
+        top: box.top,
+        right: box.right,
+        bottom: box.bottom,
+        left: box.left,
+        boxHeight:box.height,
+        abtop: box.top + window.pageYOffset,
+        abright: box.right + window.pageXOffset,
+        abbottom: box.bottom + window.pageYOffset,
+        ableft: box.left + window.pageXOffset
+      };
+    }
+    let sec01=document.getElementById('intro');
+    let sec02=document.getElementById('about');
+    let sec03=document.getElementById('skill');
+    let sec04=document.getElementById('pofol');
+    let headerNavTitle=document.getElementsByClassName('header-nav-list')[0].children;
+    let documentHeight=document.querySelector('body').style.height;
+      window.onscroll=function(){
+      let sec01Coods=fnGetCoods(sec01);
+      let sec02Coods=fnGetCoods(sec02);
+      let sec03Coods=fnGetCoods(sec03);
+      let sec04Coods=fnGetCoods(sec04);
+      if(sec01Coods.top < 0 && sec01Coods.boxHeight / 2 + sec01Coods.top < 0){
+        headerNavTitle[0].classList.remove('active');
+        headerNavTitle[1].classList.add('active');
+      }
+      else if(sec01Coods.top >= 0 || sec02Coods.bottom + sec02Coods.boxHeight > 0){
+        headerNavTitle[0].classList.add('active');
+        headerNavTitle[1].classList.remove('active');
+      }
+    }
   </script>
 </body>
 </html>
