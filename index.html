@@ -395,6 +395,10 @@
           headerNavTitle[1].classList.remove('active');
           headerNavTitle[2].classList.add('active');
         }
+        if(sec01Coods.bottom > docHeight / 2 && sec02Coods.top > docHeight / 2){
+          headerNavTitle[0].classList.add('active');
+          headerNavTitle[1].classList.remove('active');
+        }
       }
       else if(headerNavTitle[0].classList.contains('active')){
         if(sec01Coods.top < 0 && (sec01Coods.boxHeight / 2)+sec01Coods.top < 0){
