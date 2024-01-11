@@ -1,0 +1,74 @@
+:root{
+  font-family: 'Roboto','Noto Sans KR',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  --color-main:#b1b2ff;
+  --color-sub1:#aac4ff;
+  --color-sub2:#d2daff;
+  --color-sub3:#eef1f1;
+  --text-color:#1b1b1b;
+  --text-color-light:#353839;
+  --text-color-gray:#dde7e7;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+#wrap{
+  overflow: hidden;
+  scroll-behavior: smooth;
+  text-transform: uppercase;
+}
+.container{
+  padding: 30px 20px;
+}
+.container-full{
+  padding: 0;
+}
+.link{
+  text-decoration: underline;
+  color: #005cbb;
+}
+.title1{
+  font-weight: 700;
+  font-size: 36px;
+}
+.title2{
+  font-weight: 700;
+  font-size: 30px;
+}
+.title3{
+  font-weight: 700;
+  font-size: 24px;
+}
+.paragraph{
+  font-weight: 400;
+  font-size: 16px;
+}
+.small-text{
+  font-weight: 400;
+  font-size: 14px;
+}
+.bold{
+  font-weight: 700 !important;
+}
+@media(max-width:768px){
+  .title1{
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .title2{
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .title3{
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .paragraph{
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .small-text{
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
