@@ -876,19 +876,46 @@
     let sec03=document.getElementById('skill');
     let sec04=document.getElementById('pofol');
     let headerNavTitle=document.getElementsByClassName('header-nav-list')[0].children;
-    let documentHeight=document.querySelector('body').style.height;
-      window.onscroll=function(){
+    window.onscroll=function(){
       let sec01Coods=fnGetCoods(sec01);
       let sec02Coods=fnGetCoods(sec02);
       let sec03Coods=fnGetCoods(sec03);
       let sec04Coods=fnGetCoods(sec04);
-      if(sec01Coods.top < 0 && sec01Coods.boxHeight / 2 + sec01Coods.top < 0){
-        headerNavTitle[0].classList.remove('active');
-        headerNavTitle[1].classList.add('active');
+      let docHeight=window.innerHeight;
+      if(headerNavTitle[0].classList.contains('active')){
+        //화면 내려갈 때
+        if(sec01Coods.top < 0 && (sec01Coods.boxHeight / 2)+sec01Coods.top < 0){
+          headerNavTitle[0].classList.remove('active');
+          headerNavTitle[1].classList.add('active');
+        }
       }
-      else if(sec01Coods.top >= 0 || sec02Coods.bottom + sec02Coods.boxHeight > 0){
-        headerNavTitle[0].classList.add('active');
-        headerNavTitle[1].classList.remove('active');
+      else if(headerNavTitle[1].classList.contains('active')){
+        //홈화면으로 올라갈 때
+        if((sec01Coods.boxHeight / 2)+sec01Coods.top > 0){
+          headerNavTitle[0].classList.add('active');
+          headerNavTitle[1].classList.remove('active');
+        }
+        //기술부분 내려갈 때
+        if(sec03Coods.top < docHeight / 2){
+          headerNavTitle[1].classList.remove('active');
+          headerNavTitle[2].classList.add('active');
+        }
+      }
+      else if(headerNavTitle[2].classList.contains('active')){
+        if(sec02Coods.bottom > 0 && sec03Coods.top > (docHeight / 2)){
+          headerNavTitle[1].classList.add('active');
+          headerNavTitle[2].classList.remove('active');
+        }
+        if(sec04Coods.top < docHeight / 2){
+          headerNavTitle[2].classList.remove('active');
+          headerNavTitle[3].classList.add('active');
+        }
+      }
+      else if(headerNavTitle[3].classList.contains('active')){
+        if(sec03Coods.bottom > 0 && sec04Coods.top > (docHeight / 2)){
+          headerNavTitle[2].classList.add('active');
+          headerNavTitle[3].classList.remove('active');
+        }
       }
     }
   </script>
