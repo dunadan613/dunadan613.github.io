@@ -8,7 +8,10 @@
   <meta property="og:title" content="포트폴리오"/>
   <meta property="og:image" content="https://dunadan613.github.io/preview.jpg"/>
   <title>포트폴리오</title>
+  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/reset_min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/skip_menu.css">
   <link rel="stylesheet" href="./assets/css/font_Roboto(no_italic)_min.css">
   <link rel="stylesheet" href="./assets/css/font_Noto_Sans_KR(no_italic)_min.css">
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
@@ -18,6 +21,7 @@
   <link rel="stylesheet" href="./assets/css/footer.css">
 </head>
 <body>
+  <div id="skip-menu"><a href="#main">메인으로</a></div>
   <section id="wrap">
     <header id="header" class="header">
       <div class="container">
@@ -123,7 +127,7 @@
     <main id="main" class="main">
       <section id="intro" class="sec intro">
         <div class="container-full">
-          <h2 class="title1">신준혁의 포트폴리오</h2>
+          <h2 class="title1" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700" data-offset="-200">신준혁의 포트폴리오</h2>
         </div>
       </section>
       <section id="about" class="sec about">
@@ -335,7 +339,9 @@
     </footer>
   </section>
   <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
     let achieveBox=document.getElementsByClassName('fill');
     for(let i=0;i<achieveBox.length;i++){
       let achieveValue=achieveBox[i].children[0].innerHTML;
