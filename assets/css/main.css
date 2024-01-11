@@ -1,6 +1,14 @@
 .main{
   margin-left: 315px;
 }
+.intro{
+  background-image: url(../images/home_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0.7);
+  color: white;
+}
 .intro .container-full{
   display: flex;
   justify-content: center;
@@ -43,6 +51,12 @@
 }
 .career li{
   width: 100%;
+}
+.skill{
+  /* background-color: #f5f1e7; */
+  /* background-color: #d5ebde; */
+  background-color: #accbe8;
+  color: #0f0b19;
 }
 .skill .container{
   display: flex;
@@ -188,7 +202,7 @@
 @media(max-width:768px){
   /* 모바일 */
   .main{
-    margin-left: 65px;
+    margin-left: 70px;
   }
   .about .container{
     flex-flow: column nowrap;
