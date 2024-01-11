@@ -886,7 +886,13 @@
       let sec03Coods=fnGetCoods(sec03);
       let sec04Coods=fnGetCoods(sec04);
       docHeight=window.innerHeight;
-      if(headerNavTitle[0].classList.contains('active')){
+      if(window.innerWidth<768 && headerNavTitle[1].classList.contains('active')){
+        if(sec02Coods.top < 0 && sec03Coods.top > 0){
+          headerNavTitle[1].classList.remove('active');
+          headerNavTitle[2].classList.add('active');
+        }
+      }
+      else if(headerNavTitle[0].classList.contains('active')){
         if(sec01Coods.top < 0 && (sec01Coods.boxHeight / 2)+sec01Coods.top < 0){
           headerNavTitle[0].classList.remove('active');
           headerNavTitle[1].classList.add('active');
@@ -897,13 +903,13 @@
           headerNavTitle[0].classList.add('active');
           headerNavTitle[1].classList.remove('active');
         }
-        if(sec03Coods.top < docHeight / 2){
+        if(sec03Coods.top < docHeight / 2 && sec02Coods.top < 0){
           headerNavTitle[1].classList.remove('active');
           headerNavTitle[2].classList.add('active');
         }
       }
       else if(headerNavTitle[2].classList.contains('active')){
-        if(sec02Coods.bottom > 0 && sec03Coods.top > (docHeight / 2)){
+        if(sec02Coods.bottom > 0 && sec02Coods.top >= 0){
           headerNavTitle[1].classList.add('active');
           headerNavTitle[2].classList.remove('active');
         }
