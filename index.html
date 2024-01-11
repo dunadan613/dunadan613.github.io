@@ -876,26 +876,27 @@
     let sec03=document.getElementById('skill');
     let sec04=document.getElementById('pofol');
     let headerNavTitle=document.getElementsByClassName('header-nav-list')[0].children;
+    let docHeight=window.innerHeight;
+    window.onresize=function(){
+      docHeight=window.innerHeight;
+    }
     window.onscroll=function(){
       let sec01Coods=fnGetCoods(sec01);
       let sec02Coods=fnGetCoods(sec02);
       let sec03Coods=fnGetCoods(sec03);
       let sec04Coods=fnGetCoods(sec04);
-      let docHeight=window.innerHeight;
+      docHeight=window.innerHeight;
       if(headerNavTitle[0].classList.contains('active')){
-        //화면 내려갈 때
         if(sec01Coods.top < 0 && (sec01Coods.boxHeight / 2)+sec01Coods.top < 0){
           headerNavTitle[0].classList.remove('active');
           headerNavTitle[1].classList.add('active');
         }
       }
       else if(headerNavTitle[1].classList.contains('active')){
-        //홈화면으로 올라갈 때
         if((sec01Coods.boxHeight / 2)+sec01Coods.top > 0){
           headerNavTitle[0].classList.add('active');
           headerNavTitle[1].classList.remove('active');
         }
-        //기술부분 내려갈 때
         if(sec03Coods.top < docHeight / 2){
           headerNavTitle[1].classList.remove('active');
           headerNavTitle[2].classList.add('active');
