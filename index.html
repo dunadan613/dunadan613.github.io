@@ -360,9 +360,6 @@
         900:{
         slidesPerView:1.5
         },
-        1000:{
-        slidesPerView:1.7
-        },
         1280:{
           slidesPerView:2.3,
         }
@@ -382,6 +379,7 @@
     let sec04=document.getElementById('pofol');
     let headerNavTitle=document.getElementsByClassName('header-nav-list')[0].children;
     let docHeight=window.innerHeight;
+    let footer=document.getElementById('footer');
     window.onresize=function(){
       docHeight=window.innerHeight;
     }
@@ -390,6 +388,7 @@
       let sec02Coods=fnGetCoods(sec02);
       let sec03Coods=fnGetCoods(sec03);
       let sec04Coods=fnGetCoods(sec04);
+      let footerCoods=fnGetCoods(footer);
       docHeight=window.innerHeight;
       if(window.innerWidth<768 && headerNavTitle[1].classList.contains('active')){
         if(sec02Coods.top < 0 && sec03Coods.top > 0){
