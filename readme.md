@@ -1,6 +1,6 @@
 # 신준혁의 포트폴리오    
 ## 담겨진 작업물들   
-1. 인천시청
+1. 인천시청    
     <img src="./assets/images/preview-incheon.jpg" width="600" height="600">   
     - 인천시청 홈페이지를 클론코딩으로 재현했습니다.     
     - 작업물 상세    
