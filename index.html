@@ -12,487 +12,10 @@
   <link rel="stylesheet" href="./assets/css/font_Roboto(no_italic)_min.css">
   <link rel="stylesheet" href="./assets/css/font_Noto_Sans_KR(no_italic)_min.css">
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-  <style>
-    :root{
-      font-family: 'Roboto','Noto Sans KR',sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      --color-main:#b1b2ff;
-      --color-sub1:#aac4ff;
-      --color-sub2:#d2daff;
-      --color-sub3:#eef1f1;
-      --text-color:#1b1b1b;
-      --text-color-light:#353839;
-      --text-color-gray:#dde7e7;
-      color: var(--text-color);
-      scroll-behavior: smooth;
-    }
-    #wrap{
-      overflow: hidden;
-      scroll-behavior: smooth;
-      text-transform: uppercase;
-    }
-    .container{
-      padding: 30px 20px;
-    }
-    .container-full{
-      padding: 0;
-    }
-    .link{
-      text-decoration: underline;
-      color: #005cbb;
-    }
-    .title1{
-      font-weight: 700;
-      font-size: 36px;
-    }
-    .title2{
-      font-weight: 700;
-      font-size: 30px;
-    }
-    .title3{
-      font-weight: 700;
-      font-size: 24px;
-    }
-    .paragraph{
-      font-weight: 400;
-      font-size: 16px;
-    }
-    .small-text{
-      font-weight: 400;
-      font-size: 14px;
-    }
-    .bold{
-      font-weight: 700 !important;
-    }
-    @media(max-width:768px){
-      .title1{
-        font-weight: 700;
-        font-size: 30px;
-      }
-      .title2{
-        font-weight: 700;
-        font-size: 24px;
-      }
-      .title3{
-        font-weight: 700;
-        font-size: 18px;
-      }
-      .paragraph{
-        font-weight: 400;
-        font-size: 14px;
-      }
-      .small-text{
-        font-weight: 400;
-        font-size: 12px;
-      }
-    }
-    /* 헤더 시작 */
-    .header{
-      width: 315px;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: var(--text-color);
-    }
-    .header .container{
-      padding-top: 40px;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-    }
-    .header h1{
-      width: 200px;
-      height: 200px;
-      margin: 25px 0;
-      border: 1px solid white;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-    .header-nav-list li{
-      margin: 50px 0;
-    }
-    .header-nav-list li:hover span{
-      text-decoration: underline;
-    }
-    .header-nav-list a{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      color: white;
-      fill: white;
-    }
-    .header-nav-list li.active a{
-      color: var(--color-main);
-      fill: var(--color-main);
-    }
-    .header-nav-list .imgbox{
-      display: inline-block;
-      margin-right: 5px;
-      width: 50px;
-      height: 50px;
-    }
-    /* 헤더 끝 */
-
-    /* 메인 시작 */
-    .main{
-      margin-left: 315px;
-    }
-    
-    /* 섹션 1번(시작화면) 시작 */
-    .intro .container-full{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    /* 섹션 1번(시작화면) 끝 */
-
-    /* 섹션 2번(이력서) 시작 */
-    .about .container{
-      display: flex;
-      justify-content: space-around;
-    }
-    .about .art-about{
-      width: calc(100% / 2 - 10px);
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-content: flex-start;
-    }
-    .art-about h2{
-      text-align: center;
-      width: 100%;
-    }
-    .art-about>ul{
-      width: 100%;
-      display: flex;
-      flex-flow: row wrap;
-      gap:10px;
-      margin-top: 20px;
-      padding: 10px;
-    }
-    .art-about li span{
-      display: inline-block;
-      width: 30%;
-    }
-    .my-info li{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      text-transform: lowercase;
-    }
-    .career li{
-      width: 100%;
-    }
-    /* 섹션 2번(이력서) 끝 */
-
-    /* 섹션 3번(스킬) 시작 */
-    .skill .container{
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-    }
-    .skill h2{
-      width: 100%;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .skill .art-skill{
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: flex-start;
-      align-items: center;
-      border: 1px solid var(--text-color);
-      padding: 10px;
-      width: calc(100% / 3 - 10px);
-    }
-    .art-skill h3{
-      margin-bottom: 30px;
-    }
-    .art-skill ul{
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    .art-skill li{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      text-transform: none;
-      padding: 15px 0;
-    }
-    .art-skill .imgbox{
-      position: relative;
-      margin-right: 20px;
-    }
-    .art-skill .imgbox .fill{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: var(--color-sub2);
-      z-index: -1;
-      border-radius: 10px;
-    }
-    .art-skill p{
-      width: 70%;
-    }
-    .art-skill p span{
-      display: inline-block;
-      margin-bottom: 5px;
-    }
-    /* 섹션 3번(스킬) 끝 */
-
-    /* 섹션 4번(작업물) 시작 */
-    .pofol .container{
-      position: relative;
-    }
-    .pofol h2{
-      margin-bottom: 30px;
-    }
-    .swiper-slide{
-      border: 1px solid var(--color-main);
-      overflow: hidden;
-      height: auto;
-    }
-    .swiper-slide .imgbox{
-      height: 100%;
-    }
-    .swiper-slide .imgbox img{
-      height: 100%;
-    }
-    .slide-txt{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 20%;
-      background-color: rgba(0, 0, 0, 0.4);
-      transform: translateX(-85%);
-      transition: 0.3s;
-      color: white;
-      padding: 10px 20px 10px 10px;
-    }
-    .slide-txt:hover{
-      transform: translateX(0);
-    }
-    .slide-txt .item-tit{
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .slide-txt .item-detail{
-      position: relative;
-    }
-    .slide-txt .btn-box{
-      display: flex;
-      justify-content: flex-start;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .slide-txt button{
-      color: white;
-      background-color: #353839;
-      width: 90px;
-      height: 45px;
-    }
-    .slide-txt button a{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-    }
-    /* 섹션 4번(작업물) 끝 */
-
-    /* 메인 끝 */
-
-    /* 푸터 시작 */
-    .footer{
-      margin-left: 315px;
-      background-color: var(--color-sub1);
-    }
-    .footer .container{
-      position: relative;
-      padding-bottom: 80px;
-    }
-    .footer button{
-      text-align: center;
-      background-color: var(--color-sub2);
-      border-color: var(--color-sub3);
-      position: absolute;
-      right: 10px;
-      bottom: 10px;
-    }
-    .footer button a{
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 6px 12px;
-    }
-    /* 푸터 끝 */
-
-    @media(max-width:1280px){
-      /* 타블렛 */
-      .header{
-        width: 215px;
-      }
-      .header h1{
-        width: 150px;
-        height: 150px;
-      }
-      .main{
-        margin-left: 215px;
-      }
-      .skill .container{
-        flex-flow: column nowrap;
-        align-items: center;
-      }
-      .skill .art-skill{
-        width: 80%;
-        margin-bottom: 20px;
-        align-items: normal;
-      }
-      .art-skill h3{
-        text-align: center;
-      }
-      .skill .etc{
-        margin-bottom: 0;
-      }
-      .art-skill li{
-        justify-content: center;
-      }
-      .art-skill .imgbox .fill{
-        border-radius: 8px;
-      }
-      .footer{
-        margin-left: 215px;
-      }
-    }
-    @media(max-width:768px){
-      /* 모바일 */
-      .header{
-        background-color: transparent;
-        z-index: 100;
-        width: auto;
-        right: auto;
-        bottom: auto;
-        border-right: 1px solid #1b1b1b;
-        border-bottom: 1px solid #1b1b1b;
-      }
-      .header .container{
-        padding: 0 10px;
-      }
-      .header h1{
-        display: none;
-      }
-      .header-nav-list a{
-        justify-content: center;
-        fill: #1b1b1b;
-      }
-      .header-nav-list .imgbox{
-        margin-right: 0;
-      }
-      .header-nav-list{
-        margin: 20px 0;
-      }
-      .header-nav-list span{
-        display: none;
-      }
-      .main{
-        margin-left: 65px;
-      }
-      .about .container{
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-      }
-      .about .art-about{
-        width: 60%;
-      }
-      .about .my-info{
-        margin-bottom: 30px;
-      }
-      .swiper-slide .imgbox{
-        box-shadow: 0 4px 10px;
-      }
-      .art-skill p br{
-        display: block;
-      }
-      .slide-txt{
-        position: static;
-        transform: translateX(0);
-        background-color: white;
-        color: var(--text-color);
-        margin-bottom: 10px;
-        padding: 10px 20px;
-      }
-      .slide-txt .btn-box{
-        position: absolute;
-        top: 80px;
-        right: 0;
-      }
-      .slide-txt button{
-        background-color: rgba(23, 26, 27, 0.5);
-        border-color: rgba(23, 26, 27, 0.9);
-      }
-      .footer{
-        margin-left: 0;
-      }
-      .item-detail p{
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-    }
-    @media(max-width:480px){
-      .header-nav .imgbox{
-        display: block;
-        width: 30px;
-        height: 30px;
-      }
-      .header-nav span{
-        display: none;
-      }
-      .main{
-        margin-left: 55px;
-      }
-      .about .art-about{
-        width: 100%;
-      }
-      .art-skill li{
-        flex-flow: column nowrap;
-      }
-      .art-skill .imgbox{
-        width: 70px;
-        height: 70px;
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-      .art-skill p span{
-        display: block;
-        text-align: center;
-      }
-      .art-skill p br{
-        display: none;
-      }
-      .slide-txt button{
-        width: 70px;
-        height: 35px;
-      }
-      .slide-txt button a{
-        font-size: 11px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/setting.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
 </head>
 <body>
   <section id="wrap">
@@ -598,13 +121,11 @@
       </div>
     </header>
     <main id="main" class="main">
-
       <section id="intro" class="sec intro">
         <div class="container-full">
           <h2 class="title1">신준혁의 포트폴리오</h2>
         </div>
       </section>
-
       <section id="about" class="sec about">
         <div class="container">
           <article class="art-about my-info">
@@ -646,7 +167,6 @@
           </article>
         </div>
       </section>
-
       <section id="skill" class="sec skill">
         <div class="container">
           <h2 class="title2">기술</h2>
@@ -732,7 +252,6 @@
           </article>
         </div>
       </section>
-
       <section id="pofol" class="sec pofol">
         <div class="container">
           <h2 class="title2">작업물</h2>
@@ -807,7 +326,6 @@
         </div>
       </section>
     </main>
-
     <footer id="footer" class="footer">
       <div class="container">
         <div class="notice">
@@ -817,23 +335,17 @@
             본 페이지에 사용된 특정 제품이나 브랜드의 아이콘은 해당 제품이나 브랜드를 나타내기 위해서만 사용되었습니다.
           </p>
         </div>
-        <div class="copyright"></div>
         <button><a href="https://github.com/dunadan613/dunadan613.github.io">포트폴리오 소스보기<br>(github)</a></button>
       </div>
     </footer>
   </section>
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <script>
-    // --------------- 스킬 ---------------
     let achieveBox=document.getElementsByClassName('fill');
     for(let i=0;i<achieveBox.length;i++){
       let achieveValue=achieveBox[i].children[0].innerHTML;
       achieveBox[i].style.top=100 - achieveValue +'%';
     }
-    // --------------- 스킬 끝 ---------------
-
-
-    // --------------- 작업물 스와이퍼 ---------------
     const swiper = new Swiper('.swiper-pofol', {
       // Optional parameters
       direction: 'horizontal',
@@ -855,20 +367,12 @@
         }
       },
     });
-    // --------------- 작업물 스와이퍼 끝 ---------------
-
     function fnGetCoods(section){
       let box=section.getBoundingClientRect();
       return {
         top: box.top,
-        right: box.right,
         bottom: box.bottom,
-        left: box.left,
         boxHeight:box.height,
-        abtop: box.top + window.pageYOffset,
-        abright: box.right + window.pageXOffset,
-        abbottom: box.bottom + window.pageYOffset,
-        ableft: box.left + window.pageXOffset
       };
     }
     let sec01=document.getElementById('intro');
