@@ -1,6 +1,5 @@
 # 신준혁의 포트폴리오    
-## 개요    
-[포트폴리오 바로가기](https://dunadan613.github.io/)    
+## [포트폴리오 바로가기](https://dunadan613.github.io/)    
 ## 담겨진 작업물들   
 1. 인천시청    
     <img src="./assets/images/preview-incheon.jpg" width="400" height="400">   
