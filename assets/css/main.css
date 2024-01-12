@@ -6,14 +6,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(0.7);
-  color: white;
+  color: var(--text-color);
 }
 .intro .container-full{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.intro .container-full p{
+  transform: translateX(-4%);
 }
 .about .container{
   display: flex;
@@ -54,9 +56,9 @@
 }
 .skill{
   /* background-color: #f5f1e7; */
-  /* background-color: #d5ebde; */
+  background-color: #d5ebde;
   /* background-color: #accbe8; */
-  background-color: var(--color-sub3);
+  /* background-color: var(--color-sub3); */
   color: #0f0b19;
 }
 .skill .container{
