@@ -55,10 +55,7 @@
   width: 100%;
 }
 .skill{
-  /* background-color: #f5f1e7; */
   background-color: #d5ebde;
-  /* background-color: #accbe8; */
-  /* background-color: var(--color-sub3); */
   color: #0f0b19;
 }
 .skill .container{
